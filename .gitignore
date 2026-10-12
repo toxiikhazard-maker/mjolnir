@@ -1,0 +1,6 @@
+.env
+certs/
+*.p12
+*.pfx
+*.pem
+node_modules/

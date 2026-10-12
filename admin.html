@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Admin för Mjölnir PC & Service." />
+  <title>Admin | Mjölnir PC & Service</title>
+  <link rel="icon" type="image/png" href="assets/mjolnir-logo-transparent.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Mjölnir PC & Service startsida">
+        <img class="brand__logo" src="assets/mjolnir-logo-transparent.png" alt="" aria-hidden="true" />
+        <div class="brand__text">
+          <div class="brand__name">Mjölnir PC & Service</div>
+          <div class="brand__tag">Säker admin</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Adminmeny">
+        <a href="index.html">Startsida</a>
+        <a href="prislista.html">Prislista</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="pill">Bakom kulisserna</p>
+        <h1>Säker adminpanel</h1>
+        <p class="lead">Adminverktyget öppnas via BankID när backend-tjänsten är konfigurerad.</p>
+      </div>
+    </section>
+
+    <section class="section admin-login" id="admin-login">
+      <div class="container">
+        <form class="form admin-login__box" id="bankid-admin-form">
+          <div class="section__head">
+            <h2>Logga in med BankID</h2>
+            <p>Admin visas bara efter en godkänd BankID-session från servern.</p>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit" id="bankid-start">Starta BankID</button>
+            <button class="btn btn--ghost" type="button" id="bankid-cancel" hidden>Avbryt</button>
+            <a class="btn btn--ghost" href="#" id="bankid-open-link" hidden>Öppna BankID</a>
+            <p class="muted" id="bankid-admin-status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div id="secure-admin-root"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand">Mjölnir PC & Service</div>
+        <div class="footer__small">Admin • BankID-förberedd verktygssida</div>
+      </div>
+      <div class="footer__small">© <span id="year">2026</span></div>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

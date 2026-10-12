@@ -1,0 +1,121 @@
+<section class="section admin-shell" id="admin-shell">
+  <div class="container admin-layout">
+    <aside class="admin-sidebar">
+      <a href="#admin-overview">Översikt</a>
+      <a href="#admin-form">Formulär</a>
+      <a href="#admin-pages">Sidor</a>
+      <a href="#admin-prices">Prislista</a>
+      <button class="admin-lock" type="button" id="admin-lock">Logga ut</button>
+    </aside>
+
+    <div class="admin-content">
+      <section class="admin-panel" id="admin-overview">
+        <div class="section__head">
+          <h2>Översikt</h2>
+          <p>Snabb status för hemsidans viktigaste delar.</p>
+        </div>
+        <div class="admin-metrics">
+          <div class="admin-metric">
+            <span>Sidor</span>
+            <strong id="admin-page-count">0</strong>
+          </div>
+          <div class="admin-metric">
+            <span>Priskategorier</span>
+            <strong id="admin-category-count">0</strong>
+          </div>
+          <div class="admin-metric">
+            <span>Prisrader</span>
+            <strong id="admin-price-count">0</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-panel" id="admin-form">
+        <div class="section__head">
+          <h2>Formulär</h2>
+          <p>Kontaktformuläret skickas via FormSubmit.</p>
+        </div>
+        <dl class="admin-list">
+          <div>
+            <dt>Mottagare</dt>
+            <dd>
+              <label class="admin-inline-field">
+                <span class="sr-only">Mottagaradress</span>
+                <input type="email" id="admin-contact-email" />
+              </label>
+            </dd>
+          </div>
+          <div>
+            <dt>Ärendetyper</dt>
+            <dd>Kontakt, Support, Faktura</dd>
+          </div>
+          <div>
+            <dt>Efter skickat</dt>
+            <dd><a class="text-link" href="tack.html">tack.html</a></dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="admin-panel" id="admin-pages">
+        <div class="section__head">
+          <h2>Sidor</h2>
+          <p>Direktlänkar till sidans delar.</p>
+        </div>
+        <div class="admin-page-list" id="admin-page-list"></div>
+      </section>
+
+      <section class="admin-panel" id="admin-prices">
+        <div class="section__head">
+          <h2>Prislista</h2>
+          <p>Välj kategori och artikel, ändra fälten och exportera när du är klar.</p>
+        </div>
+        <div class="admin-price-editor" id="admin-price-editor">
+          <div class="admin-price-picker">
+            <label>
+              Kategori
+              <select id="admin-price-category"></select>
+            </label>
+            <label>
+              Artikel
+              <select id="admin-price-item"></select>
+            </label>
+          </div>
+
+          <div class="admin-editor-item admin-editor-item--single">
+            <label>
+              Kategorinamn
+              <input id="admin-category-name" />
+            </label>
+            <label>
+              Kategorinotis
+              <input id="admin-category-note" placeholder="Valfri notis" />
+            </label>
+            <label>
+              Artikel
+              <input id="admin-item-name" />
+            </label>
+            <label>
+              Pris
+              <input id="admin-item-price" />
+            </label>
+            <label class="span-2">
+              Detalj
+              <input id="admin-item-detail" placeholder="Valfri detalj" />
+            </label>
+            <label class="span-2">
+              Ingår
+              <textarea id="admin-item-includes" rows="4" placeholder="En rad per punkt"></textarea>
+            </label>
+          </div>
+
+          <p class="muted" id="admin-price-selected"></p>
+        </div>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="button" id="admin-export-prices">Exportera ändringar</button>
+          <p class="muted">Exporten öppnar en kodruta med hemsidans uppdaterade konfigurationsdata.</p>
+        </div>
+        <textarea class="admin-export is-hidden" id="admin-export-output" readonly></textarea>
+      </section>
+    </div>
+  </div>
+</section>
